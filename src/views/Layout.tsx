@@ -5,19 +5,28 @@ import Projects from "../assets/projects.svg";
 import Darkmode from "../assets/darkmode.svg";
 import Lightmode from "../assets/lightmode.svg";
 import Resume from "../assets/resume.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function HomePage() {
   const navigate = useNavigate();
   const [mode, setMode] = useState("dark");
+  const toggleMode = () => {
+    console.log("clicked");
+    const root = document.documentElement;
+    setMode((prevMode) => {
+      if (prevMode === "dark") {
+        root.classList.remove("dark");
+        return "light";
+      }
+      root.classList.add("dark");
+      return "dark";
+    });
+  };
+  useEffect(() => {
+    console.log(mode);
+  }, [mode]);
   return (
-    <main
-      className={`antialiased inter-400 ${
-        mode === "dark"
-          ? "text-foregroundDark bg-backgroundDark"
-          : "bg-white text-foregroundLight"
-      } min-h-screen max-h-fit`}
-    >
+    <main className="antialiased satoshi-400 dark:text-foregroundDark dark:bg-backgroundDark bg-white text-foregroundLight min-h-screen max-h-fit">
       <section className="flex min-h-screen max-h-fit">
         <div
           className={`min-h-screen max-h-fit w-1/6 border-r ${
@@ -55,16 +64,7 @@ export default function HomePage() {
         </div>
         <div className="w-full px-6 max-w-[1000px]">
           <div className="flex h-16 items-center w-full justify-end gap-x-8 mb-8">
-            <button
-              onClick={() => {
-                setMode((prevMode) => {
-                  if (prevMode === "dark") {
-                    return "light";
-                  }
-                  return "dark";
-                });
-              }}
-            >
+            <button onClick={toggleMode}>
               {mode === "dark" ? (
                 <img src={Darkmode} className="w-4 h-4" />
               ) : (
