@@ -3,12 +3,12 @@ import Email from "../assets/email.svg";
 import GitHub from "../assets/github.svg";
 import LinkedIn from "../assets/linkedin.svg";
 import ProjectCard from "../components/ProjectCard";
-// import Game from "../components/Game";
+import Game from "../components/Game";
 
 export default function HomePage() {
   return (
     <div className="">
-      {/* <Game /> */}
+      <Game />
       <h2 className="cabinet-500 text-xl mb-2 mt-10">
         Hello! I'm <span className="text-sky">Anup Bhoos</span>
       </h2>
