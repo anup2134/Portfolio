@@ -13,6 +13,9 @@ export default {
         sky: "#0ea5e9",
         darkButton: "#f1f5f9",
       },
+      screens: {
+        sm: { max: "820px" },
+      },
     },
   },
   plugins: [],

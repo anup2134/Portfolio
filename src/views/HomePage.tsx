@@ -10,7 +10,7 @@ export default function HomePage() {
       <h2 className="cabinet-500 text-xl mb-2 mt-10">
         Hello! I'm <span className="text-sky">Anup Bhoos</span>
       </h2>
-      <h1 className="cabinet-700 text-5xl leading-[130%]">
+      <h1 className="cabinet-700 text-5xl sm:text-3xl leading-[130%]">
         Passionate <Highlight text="Full-Stack" color="#16a34a" /> developer and
         <Highlight text="Machine Learning" color="#9B4DCA" /> Engineer
       </h1>
@@ -19,7 +19,7 @@ export default function HomePage() {
         <br />
         IIT Roorkee Graduate
       </p>
-      <ul className="flex gap-x-16 mt-20 items-center">
+      <ul className="flex gap-x-16 mt-20 sm:mt-10 items-center">
         <li>
           <a href="https://github.com/anup2134/" target="_blank">
             <img src={GitHub} className="h-8 w-8 fill-para" />

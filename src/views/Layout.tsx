@@ -24,12 +24,21 @@ export default function HomePage() {
   };
 
   return (
-    <main className="antialiased satoshi-400 dark:text-foregroundDark dark:bg-backgroundDark bg-white text-foregroundLight min-h-screen max-h-fit">
-      <section className="flex min-h-screen max-h-fit">
+    <main className="antialiased satoshi-400 dark:text-foregroundDark dark:bg-backgroundDark bg-white text-foregroundLight min-h-screen max-h-fit pb-20">
+      <section className="flex sm:block  min-h-screen max-h-fit">
+        {/* <div
+          className="min-h-screen max-h-fit w-1/6 border-r sm:border-t sm:border-r-0
+              dark:border-r-foregroundLight sm:border-t-foregroundLight border-r-[#E5E7EB]
+              flex flex-col gap-y-16 justify-center items-end pr-16 sm:pr-0 sm:flex-row sm:gap-x-10
+              sm:gap-y-0 sm:block sm:fixed sm:-bottom-2 sm:z-20 sm:min-h-fit sm:h-16 sm:w-screen sm:max-h-none
+              sm:justify-center sm:items-center sm:bg-black"
+        > */}
         <div
-          className={`min-h-screen max-h-fit w-1/6 border-r ${
-            mode === "dark" ? "border-r-foregroundLight" : "border-r-[#E5E7EB]"
-          } flex flex-col gap-y-16 justify-center items-end pr-16`}
+          className="min-h-screen max-h-fit w-1/6 border-r sm:border-t sm:border-r-0
+              dark:border-r-foregroundLight sm:border-t-foregroundLight border-r-[#E5E7EB]
+              flex flex-col gap-y-16 justify-center items-end pr-16 sm:pr-0 sm:flex sm:flex-row sm:gap-x-10
+              sm:gap-y-0 sm:fixed sm:-bottom-2 sm:z-20 sm:min-h-fit sm:h-16 sm:w-screen sm:max-h-none
+              sm:justify-center sm:items-center sm:bg-black"
         >
           <button
             onClick={() => {

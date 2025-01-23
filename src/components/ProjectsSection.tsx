@@ -9,7 +9,7 @@ export default function ProjectsSection() {
     <section className="mt-10 satoshi-700 text-para dark:text-foregroundDark text-xl pb-20">
       <h1 className="mb-10 cabinet-700">Latest projects</h1>
       <ul className="flex flex-col gap-y-6">
-        <li className="flex gap-x-8">
+        <li className="flex gap-x-8 flex-wrap sm:gap-x-0 sm:gap-y-8">
           <ProjectCard
             name="Fluid-flow reconstruction"
             image={AI}
@@ -24,7 +24,7 @@ export default function ProjectsSection() {
             rotate
           />
         </li>
-        <li className="flex gap-x-8">
+        <li className="flex gap-x-8 flex-wrap sm:gap-x-0 sm:gap-y-8">
           <ProjectCard
             name="Super TTT"
             image={SuperTTT}
