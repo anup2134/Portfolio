@@ -13,6 +13,7 @@ export default function StackStrip() {
 
   useEffect(() => {
     const canvas = canRef?.current ?? null;
+    let animationNum: number;
     if (!canvas) return;
     canvas.width = canRef.current?.offsetWidth ?? 0;
     canvas.height = 100;
@@ -36,7 +37,26 @@ export default function StackStrip() {
         ctx.drawImage(obj.img, obj.x, obj.y, 80, 80);
       };
 
-      //   const
+      const update = (obj: {
+        img: HTMLImageElement;
+        x: number;
+        y: number;
+        speed: number;
+      }) => {
+        obj.x += obj.speed;
+      };
+
+      const animate = (obj: {
+        img: HTMLImageElement;
+        x: number;
+        y: number;
+        speed: number;
+      }) => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        draw(obj);
+        update(obj);
+        // animationNum = requestAnimationFrame(animate);
+      };
       draw(obj);
     };
 
