@@ -5,7 +5,7 @@ import Projects from "../assets/projects.svg";
 import Darkmode from "../assets/darkmode.svg";
 import Lightmode from "../assets/lightmode.svg";
 import Resume from "../assets/resume.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function HomePage() {
   const navigate = useNavigate();
