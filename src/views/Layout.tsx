@@ -11,7 +11,7 @@ export default function HomePage() {
   const navigate = useNavigate();
   const [mode, setMode] = useState("dark");
   const toggleMode = () => {
-    console.log("clicked");
+    // console.log("clicked");
     const root = document.documentElement;
     setMode((prevMode) => {
       if (prevMode === "dark") {
@@ -22,15 +22,13 @@ export default function HomePage() {
       return "dark";
     });
   };
-  useEffect(() => {
-    console.log(mode);
-  }, [mode]);
+
   return (
     <main className="antialiased satoshi-400 dark:text-foregroundDark dark:bg-backgroundDark bg-white text-foregroundLight min-h-screen max-h-fit">
       <section className="flex min-h-screen max-h-fit">
         <div
           className={`min-h-screen max-h-fit w-1/6 border-r ${
-            mode === "dark" ? "border-r-[#1E293B]" : "border-r-[#E5E7EB]"
+            mode === "dark" ? "border-r-foregroundLight" : "border-r-[#E5E7EB]"
           } flex flex-col gap-y-16 justify-center items-end pr-16`}
         >
           <button
@@ -72,7 +70,7 @@ export default function HomePage() {
               )}
             </button>
             <a
-              className="bg-sky rounded-full px-3 h-8 text-center flex items-center text-[#F1F5F9] hover:bg-[#0284C7] transition-colors duration-300"
+              className="bg-sky rounded-full px-3 h-8 text-center flex items-center text-darkButton hover:bg-[#0284C7] transition-colors duration-300"
               href="https://drive.google.com/file/d/16qT5iqSPYnxpHf9gyDMWEE_d48YLYdev/view?usp=sharing"
               target="_blank"
             >

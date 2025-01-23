@@ -6,7 +6,7 @@ import Flyleaf from "../assets/flyleaf.svg";
 import SuperTTT from "../assets/superttt.svg";
 export default function ProjectsSection() {
   return (
-    <section className="mt-10 satoshi-700 text-[#64748b] dark:text-[#e2e8f0] text-xl pb-20">
+    <section className="mt-10 satoshi-700 text-para dark:text-foregroundDark text-xl pb-20">
       <h1 className="mb-10 cabinet-700">Latest projects</h1>
       <ul className="flex flex-col gap-y-6">
         <li className="flex gap-x-8">

@@ -7,30 +7,11 @@ export default {
       colors: {
         backgroundDark: "#0F172A",
         foregroundDark: "#e2e8f0",
-        foregroundLight: "#0f172a",
+        foregroundLight: "#1e293b",
+        paraDark: "#94a3b8",
+        para: "#64748b",
         sky: "#0ea5e9",
-      },
-      keyframes: {
-        marquee: {
-          "0%": {
-            transform: "translateX(0%)",
-          },
-          "100%": {
-            transform: "translateX(-100%)",
-          },
-        },
-        marquee2: {
-          "0%": {
-            transform: "translateX(100%)",
-          },
-          "100%": {
-            transform: "translateX(0%)",
-          },
-        },
-      },
-      animation: {
-        marquee: "marquee 10s linear infinite",
-        marquee2: "marquee2 10s linear infinite",
+        darkButton: "#f1f5f9",
       },
     },
   },
