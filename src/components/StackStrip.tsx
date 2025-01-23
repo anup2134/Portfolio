@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import React from "../assets/react.svg";
+// import React from "../assets/react.svg";
 export default function StackStrip() {
   const canRef = useRef(null);
 
