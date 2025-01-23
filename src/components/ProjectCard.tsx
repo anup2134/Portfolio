@@ -1,4 +1,4 @@
-import Arrow from "./Arrow";
+import Arrow from "./Arrow.js";
 // import AI from "../assets/ai.svg";
 export default function ProjectCard({
   name,

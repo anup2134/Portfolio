@@ -1,5 +1,5 @@
-import ProjectsSection from "../components/ProjectsSection";
-import StackStrip from "../components/StackStrip";
+import ProjectsSection from "../components/ProjectsSection.js";
+import StackStrip from "../components/StackStrip.js";
 
 export default function Projects() {
   const array: string[] = [

@@ -1,4 +1,4 @@
-import ResumeCard from "../components/ResumeCard.tsx";
+import ResumeCard from "../components/ResumeCard.js";
 // import Education from "../components/Education.tsx";
 export default function Resume() {
   return (

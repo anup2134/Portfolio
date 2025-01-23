@@ -1,8 +1,8 @@
-import Highlight from "../components/Highlight";
+import Highlight from "../components/Highlight.js";
 import Email from "../assets/email.svg";
 import GitHub from "../assets/github.svg";
 import LinkedIn from "../assets/linkedin.svg";
-import ProjectsSection from "../components/ProjectsSection";
+import ProjectsSection from "../components/ProjectsSection.js";
 export default function HomePage() {
   return (
     <div className="">
