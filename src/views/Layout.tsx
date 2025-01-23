@@ -73,7 +73,7 @@ export default function HomePage() {
             </button>
             <a
               className="bg-sky rounded-full px-3 h-8 text-center flex items-center text-[#F1F5F9] hover:bg-[#0284C7] transition-colors duration-300"
-              href=""
+              href="https://drive.google.com/file/d/16qT5iqSPYnxpHf9gyDMWEE_d48YLYdev/view?usp=sharing"
               target="_blank"
             >
               Resume

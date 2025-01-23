@@ -1,0 +1,7 @@
+<svg viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+  <style>
+        .color{fill:#1CA2BB}
+  </style>
+  <text x="5" y="15" class="color">Hello</text>
+  <text x="5" y="28" class="color">Fresh</text>
+</svg>

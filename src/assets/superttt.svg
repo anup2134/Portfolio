@@ -1,0 +1,13 @@
+<svg viewBox="0 0 50 35" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .color {
+      fill: #1ca2bb;
+    }
+  </style>
+  <text x="5" y="15" class="color">
+    Super
+  </text>
+  <text x="5" y="30" class="color">
+    TTT
+  </text>
+</svg>

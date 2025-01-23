@@ -1,12 +1,15 @@
 import Arrow from "./Arrow";
+// import AI from "../assets/ai.svg";
 export default function ProjectCard({
   name,
   description,
   rotate,
+  image,
 }: {
   name: string;
   description: string;
   rotate?: boolean;
+  image?: string;
 }) {
   return (
     <button>
@@ -17,7 +20,7 @@ export default function ProjectCard({
      } hover:rotate-0 
      transition-transform duration-700 hover:duration-100 ease-in-out p-5 text-left`}
       >
-        <img src="" className="h-10 w-10 rounded-full" />
+        <img src={image ? image : ""} className="h-10 w-10 rounded-full" />
         <h2 className="text-[#1e293b] dark:text-[#E2E8F0] satoshi-700 text-lg my-2">
           {name}
         </h2>

@@ -2,7 +2,7 @@ import Highlight from "../components/Highlight";
 import Email from "../assets/email.svg";
 import GitHub from "../assets/github.svg";
 import LinkedIn from "../assets/linkedin.svg";
-import ProjectCard from "../components/ProjectCard";
+import ProjectsSection from "../components/ProjectsSection";
 // import Game from "../components/Game";
 
 export default function HomePage() {
@@ -47,22 +47,7 @@ export default function HomePage() {
         creative thinking, I strive to deliver meaningful and effective results.
       </p>
 
-      <section className="mt-10 satoshi-700 text-[#64748b] dark:text-[#e2e8f0] text-xl pb-20">
-        <h1 className="mb-10 cabinet-700">Latest projects</h1>
-        <ul className="flex flex-col gap-y-6">
-          <li className="flex gap-x-8">
-            <ProjectCard
-              name="Fluid-flow reconstruction"
-              description="asdfasdfdsf"
-            />
-            <ProjectCard name="Flyleaf" description="asdfasdfasdfsadf" rotate />
-          </li>
-          <li className="flex gap-x-8">
-            <ProjectCard name="Super TTT" description="asdfsdfsd" />
-            <ProjectCard name="Hello Fresh" description="asdfsdfsd" rotate />
-          </li>
-        </ul>
-      </section>
+      <ProjectsSection />
     </div>
   );
 }
