@@ -3,7 +3,7 @@ import ResumeCard from "../components/ResumeCard.js";
 export default function Resume() {
   return (
     <div>
-      <h1 className="dark:text-foregroundDark text-foregroundLight text-3xl mb-10">
+      <h1 className="dark:text-foregroundDark text-foregroundLight text-3xl mb-10 cabinet-700">
         Education
       </h1>
       <div className="relative">
@@ -30,7 +30,7 @@ export default function Resume() {
           src="https://www.svgrepo.com/show/69263/school.svg"
         />
       </div>
-      <h1 className="dark:text-foregroundDark text-foregroundLight text-3xl mb-10">
+      <h1 className="dark:text-foregroundDark text-foregroundLight text-3xl mb-10 mt-16 cabinet-700">
         Work Experience
       </h1>
       <ResumeCard

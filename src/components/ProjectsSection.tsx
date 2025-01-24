@@ -15,6 +15,12 @@ export default function ProjectsSection() {
             image={AI}
             description="Enhanced reconstruction using EPOD/PCA, SVD, and ML models (U-Net CNN, SR-GAN) in Keras, 
             improving performance by 15% and boosting temporal resolution for detailed supersonic jet flow analysis."
+            detailedDescription={`Designed and implemented a dual high-speed camera setup to capture high-frame-rate Schlieren images of supersonic jet flows.
+            Applied traditional flow reconstruction techniques, such as Proper Orthogonal Decomposition (POD) and Singular Value Decomposition (SVD), to analyse and reconstruct flow patterns.
+            Developed and trained machine learning models, including U-Net Convolutional Neural Networks (CNN) and Super-Resolution Generative Adversarial Networks (SR-GAN), using Keras to enhance image resolution and reconstruction accuracy.`}
+            outcomes={`Enhanced the temporal resolution of the Schlieren measurement system, enabling more detailed visualisation of supersonic jet flows.
+            Achieved a 15% improvement in flow reconstruction accuracy by leveraging machine learning models over traditional methods like EPOD.      
+            Enabled clearer and more accurate analysis of supersonic jet dynamics, contributing to a better understanding of fluid flow patterns.`}
           />
           <ProjectCard
             name="Flyleaf"
@@ -31,6 +37,10 @@ export default function ProjectsSection() {
             description="Developed multi-player Ultimate Tic-Tac-Toe with expanded rules for enhanced strategy. 
             Utilized WebSocket-based communication and OOP for game state management, matchmaking, 
             and smooth interactions."
+            detailedDescription={`Developed Ultimate Tic-Tac-Toe, a complex variant of the classic game with expanded rules and increased strategic depth.
+            Implemented WebSocket-based communication and Object-Oriented Programming (OOP) principles in NodeJS for efficient game state management, matchmaking, and seamless player interactions.
+            Designed and built a responsive and intuitive user interface using ReactJS, featuring real-time board state updates and visual cues for valid moves.`}
+            // outcomes={`Delivered a user-friendly interface with real-time updates, improving the overall player experience.`}
           />
           <ProjectCard
             name="Hello Fresh"

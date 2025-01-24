@@ -1,18 +1,34 @@
 import Arrow from "./Arrow.js";
-// import AI from "../assets/ai.svg";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 export default function ProjectCard({
   name,
   description,
+  detailedDescription,
   rotate,
   image,
+  outcomes,
 }: {
   name: string;
   description: string;
   rotate?: boolean;
   image?: string;
+  detailedDescription?: string;
+  outcomes?: string;
 }) {
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    navigate(`/project/${encodeURIComponent(name)}`, {
+      state: { name, image, detailedDescription, outcomes },
+    });
+  };
+  useEffect(() => {
+    localStorage.setItem(`${name}-des`, detailedDescription);
+    localStorage.setItem(`${name}-out`, outcomes);
+    localStorage.setItem(`${name}-img`, image);
+  }, []);
   return (
-    <button>
+    <button onClick={handleNavigation}>
       <div
         className={`w-80 h-80 rounded-lg border border-slate-200 dark:border-slate-800 dark:bg-gradient-to-t
      dark:from-slate-800 dark:to-slate-800/30 ${
