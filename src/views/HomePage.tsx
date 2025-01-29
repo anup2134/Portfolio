@@ -5,13 +5,19 @@ import LinkedIn from "../assets/linkedin.svg";
 import ProjectsSection from "../components/ProjectsSection.js";
 import { useEffect, useState } from "react";
 
-export default function HomePage() {
+export default function HomePage({
+  visited,
+  setVisited,
+}: {
+  visited: boolean;
+  setVisited: (visited: boolean) => void;
+}) {
   const [animate, setAnimate] = useState(false);
   useEffect(() => {
-    const hasVisited = sessionStorage.getItem("visited");
+    const hasVisited = visited;
     if (!hasVisited) {
       setAnimate(true);
-      sessionStorage.setItem("visited", "true");
+      setVisited(true);
     }
   }, []);
   return (

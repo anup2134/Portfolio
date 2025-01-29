@@ -6,24 +6,18 @@ import Projects from "./views/Projects.js";
 import Project from "./views/Project.js";
 import Resume from "./views/Resume.js";
 import PageNotFound from "./views/PageNotFound.tsx";
-import { useEffect } from "react";
-
+// import { useEffect, useState } from "react";
+import { useState } from "react";
 function App() {
-  useEffect(() => {
-    const fun = () => {
-      sessionStorage.clear();
-    };
-    window.addEventListener("beforeunload", fun);
-
-    return () => {
-      window.removeEventListener("beforeunload", fun);
-    };
-  });
+  const [visited, setVisited] = useState(false);
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="" element={<HomePage />} />
+          <Route
+            path=""
+            element={<HomePage visited={visited} setVisited={setVisited} />}
+          />
           <Route path="resume" element={<Resume />} />
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
