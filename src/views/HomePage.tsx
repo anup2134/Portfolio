@@ -3,7 +3,17 @@ import Email from "../assets/email.svg";
 import GitHub from "../assets/github.svg";
 import LinkedIn from "../assets/linkedin.svg";
 import ProjectsSection from "../components/ProjectsSection.js";
+import { useEffect, useState } from "react";
+
 export default function HomePage() {
+  const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    const hasVisited = sessionStorage.getItem("visited");
+    if (!hasVisited) {
+      setAnimate(true);
+      sessionStorage.setItem("visited", "true");
+    }
+  }, []);
   return (
     <div className="">
       {/* <Game /> */}
@@ -11,8 +21,16 @@ export default function HomePage() {
         Hello! I'm <span className="text-sky">Anup Bhoos</span>
       </h2>
       <h1 className="cabinet-700 text-5xl sm:text-3xl leading-[130%]">
-        Passionate <Highlight text="Full-Stack" color="#16a34a" /> developer and
-        <Highlight text="Machine Learning" color="#9B4DCA" /> Engineer
+        Passionate{" "}
+        <Highlight text="Full-Stack" color="#16a34a" animate={animate} />{" "}
+        developer and
+        <Highlight
+          text="Machine Learning"
+          color="#9B4DCA"
+          delay="2s"
+          animate={animate}
+        />{" "}
+        Engineer
       </h1>
       <p className="text-para dark:text-paraDark text-lg cabinet-500 mt-2">
         Developer, OSS Contributor. I read, game and travel for fun.

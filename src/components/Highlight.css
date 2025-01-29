@@ -1,0 +1,16 @@
+.background-ani {
+  animation: bgcolor 2s 1 forwards;
+  transform-origin: left;
+  background: transparent;
+}
+
+@keyframes bgcolor {
+  0% {
+    transform: scaleX(0);
+    background: var(--dynamic-color);
+  }
+  100% {
+    background: var(--dynamic-color);
+    transform: scaleX(1);
+  }
+}

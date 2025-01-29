@@ -3,12 +3,9 @@ import { useRef, useEffect } from "react";
 export default function StackStrip({ imageArray }: { imageArray: string[] }) {
   const canRef = useRef<HTMLCanvasElement>(null);
   function loadImage(src: string) {
-    // console.log(src);
     return new Promise((resolve, reject) => {
       let img = new Image();
       img.src = src;
-      //   const arr = src.split("/");
-      //   img.alt = arr[arr.length].split(".")[0];
       img.onload = () => resolve(img);
       img.onerror = reject;
     });
@@ -20,7 +17,6 @@ export default function StackStrip({ imageArray }: { imageArray: string[] }) {
     if (!canvas) return;
     canvas.width = canRef.current?.offsetWidth ?? 0;
     canvas.height = 100;
-    // console.log(canvas.width, canvas.height);
     const ctx = canvas.getContext("2d");
     const speed = 0.7;
     if (!ctx) return;
@@ -39,7 +35,6 @@ export default function StackStrip({ imageArray }: { imageArray: string[] }) {
         })
       );
 
-      //   console.log(objects);
 
       const draw = (
         objects: {
