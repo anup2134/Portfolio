@@ -1,4 +1,3 @@
-// import React from "react";
 import ProjectCard from "./ProjectCard.js";
 import AI from "../assets/ai.svg";
 import HelloFresh from "../assets/hellofresh.svg";

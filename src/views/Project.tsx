@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function Project({
@@ -11,27 +10,7 @@ export default function Project({
   outcomes: string;
 }) {
   const location = useLocation();
-  // const navigate = useNavigate();
-  // const [description, setDescription] = useState("");
-  // const [outcomes, setOutcomes] = useState("");
-  // const [image, setImage] = useState("");
   const name = decodeURIComponent(location.pathname).split("/")[2];
-  // console.log(localStorage.getItem(`${name}-des`));
-  // useEffect(() => {
-  //   if (!localStorage.getItem(`${name}-des`)) {
-  //     navigate("/projects");
-  //   }
-  //   if (!localStorage.getItem(`${name}-img`)) {
-  //     navigate("/projects");
-  //   }
-  //   if (!localStorage.getItem(`${name}-out`)) {
-  //     navigate("/projects");
-  //   }
-  //   setDescription(localStorage.getItem(`${name}-des`));
-  //   setOutcomes(localStorage.getItem(`${name}-out`));
-  //   setImage(localStorage.getItem(`${name}-img`));
-  // }, [location]);
-
   return (
     <div className="">
       <div className="gap-x-5 mb-5 flex items-center">
