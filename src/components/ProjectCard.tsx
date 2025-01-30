@@ -18,9 +18,7 @@ export default function ProjectCard({
 }) {
   const navigate = useNavigate();
   const handleNavigation = () => {
-    navigate(`/project/${encodeURIComponent(name)}`, {
-      state: { name, image, detailedDescription, outcomes },
-    });
+    navigate(`/project/${encodeURIComponent(name)}`);
   };
   useEffect(() => {
     localStorage.setItem(`${name}-des`, detailedDescription);
