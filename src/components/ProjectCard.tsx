@@ -1,30 +1,21 @@
 import Arrow from "./Arrow.js";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 export default function ProjectCard({
   name,
   description,
-  detailedDescription,
   rotate,
   image,
-  outcomes,
 }: {
   name: string;
   description: string;
   rotate?: boolean;
-  image?: string;
-  detailedDescription?: string;
-  outcomes?: string;
+  image: string;
 }) {
   const navigate = useNavigate();
   const handleNavigation = () => {
     navigate(`/project/${encodeURIComponent(name)}`);
   };
-  useEffect(() => {
-    localStorage.setItem(`${name}-des`, detailedDescription);
-    localStorage.setItem(`${name}-out`, outcomes);
-    localStorage.setItem(`${name}-img`, image);
-  }, []);
+
   return (
     <button onClick={handleNavigation}>
       <div

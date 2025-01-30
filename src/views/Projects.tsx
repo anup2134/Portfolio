@@ -16,7 +16,7 @@ export default function Projects() {
     "https://www.svgrepo.com/show/376367/express.svg",
     "https://www.svgrepo.com/show/331488/mongodb.svg",
     "https://www.svgrepo.com/show/378440/nextjs-fill.svg",
-    "	https://www.svgrepo.com/show/355190/reactjs.svg",
+    "https://www.svgrepo.com/show/355190/reactjs.svg",
   ];
 
   return (
