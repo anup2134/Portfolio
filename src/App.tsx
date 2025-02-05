@@ -1,5 +1,10 @@
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
-import { useState } from "react";
+import {
+  Route,
+  Routes,
+  BrowserRouter as Router,
+  useLocation,
+} from "react-router-dom";
+import { useEffect, useState } from "react";
 import Layout from "./views/Layout.js";
 import HomePage from "./views/HomePage.js";
 import About from "./views/About.js";
@@ -14,8 +19,17 @@ import TTT from "./assets/superttt.svg";
 
 function App() {
   const [visited, setVisited] = useState(false);
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [pathname]);
+
+    return null;
+  };
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route
