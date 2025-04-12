@@ -1,13 +1,18 @@
 import ResumeCard from "../components/ResumeCard.js";
 // import Education from "../components/Education.tsx";
+import School from "../assets/school.svg";
+
 export default function Resume() {
   return (
     <div>
-      <h1 className="dark:text-foregroundDark text-foregroundLight text-3xl mb-10 cabinet-700">
+      <h1 className="dark:text-foregroundDark text-backgroundDark text-[22px] mt-10 mb-5 alpino-700 transition-colors duration-500">
         Education
       </h1>
       <div className="relative">
-        <div className="absolute h-3/4 w-1 border-l dark:border-l-foregroundDark border-l-foregroundLight top-3 z-0 left-8"></div>
+        <div
+          className="absolute h-3/4 w-1 border-l dark:border-l-foregroundDark border-l-foregroundLight top-3 z-0 left-8"
+          style={{ transition: "border-color 0.7s linear" }}
+        ></div>
         <ResumeCard
           date="Nov 2020 - Jul 2024"
           profile="B.Tech Mechanical Engineering"
@@ -27,10 +32,10 @@ export default function Resume() {
           profile="Class X"
           organisation="Bhausaheb Firodiya Highschool, Ahmednagar"
           description="Percentage: 93.20%"
-          src="https://www.svgrepo.com/show/69263/school.svg"
+          src={School}
         />
       </div>
-      <h1 className="dark:text-foregroundDark text-foregroundLight text-3xl mb-10 mt-16 cabinet-700">
+      <h1 className="dark:text-foregroundDark text-backgroundDark text-[22px] mb-5 mt-10 alpino-700 transition-colors duration-700">
         Work Experience
       </h1>
       <ResumeCard
@@ -38,11 +43,13 @@ export default function Resume() {
         profile="Summer Intern"
         organisation="Indian Institute of Technology, Roorkee"
         description={
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-outside">
             <li>
-              I explored the use of Machine Learning to predict wall
-              temperatures using ambient temperature data collected over a
-              two-month period across four consecutive years.
+              {/* <span className="pl-4 block"> */}I explored the use of Machine
+              learning to predict wall temperatures using ambient temperature
+              data collected over a two-month period across four consecutive
+              years.
+              {/* </span> */}
             </li>
             <li>
               My role involved collecting and preprocessing data, building and

@@ -11,10 +11,13 @@ export default function Highlight({
   animate: boolean;
 }) {
   return (
-    <div className={`inline-block w-fit relative`} style={{ color }}>
+    <div
+      className={`inline-block w-fit relative tracking-tight`}
+      style={{ color }}
+    >
       {text}
       <div
-        className={`-rotate-1 absolute left-0 top-1 text-transparent ${
+        className={`-rotate-1 absolute left-0 top-1 tracking-tight text-transparent ${
           animate ? "background-ani" : ""
         } h-12 sm:h-[1.875rem]`}
         style={

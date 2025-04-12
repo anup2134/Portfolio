@@ -3,52 +3,46 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "CabinetGrotesk-Regular";
-  src: url("/fonts/CabinetGrotesk-Regular.woff2") format("woff2"),
-    url("/fonts/CabinetGrotesk-Regular.woff") format("woff");
-
+  font-family: "Alpino-Regular";
+  src: url("/fonts/Alpino-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
-  font-family: "CabinetGrotesk-Medium";
-  src: url("/fonts/CabinetGrotesk-Medium.woff2") format("woff2"),
-    url("/fonts/CabinetGrotesk-Medium.woff") format("woff");
 
+@font-face {
+  font-family: "Alpino-Medium";
+  src: url("/fonts/Alpino-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
-  font-family: "CabinetGrotesk-Bold";
-  src: url("/fonts/CabinetGrotesk-Bold.woff2") format("woff2"),
-    url("/fonts/CabinetGrotesk-Bold.woff") format("woff");
 
+@font-face {
+  font-family: "Alpino-Bold";
+  src: url("/fonts/Alpino-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Satoshi-Regular";
-  src: url("../fonts/Satoshi-Regular.woff2") format("woff2"),
-    url("../fonts/Satoshi-Regular.woff") format("woff");
+  src: url("../fonts/Satoshi-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "Satoshi-Medium";
-  src: url("../fonts/Satoshi-Medium.woff2") format("woff2"),
-    url("../fonts/Satoshi-Medium.woff") format("woff");
+  src: url("../fonts/Satoshi-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "Satoshi-Bold";
-  src: url("../fonts/Satoshi-Bold.woff2") format("woff2"),
-    url("../fonts/Satoshi-Bold.woff") format("woff");
+  src: url("../fonts/Satoshi-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -59,38 +53,36 @@
   font-weight: 700;
   font-style: normal;
 }
-
 .satoshi-400 {
-  font-family: "Satoshi-Bold", sans-serif;
+  font-family: "Satoshi-Regular", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 .satoshi-500 {
-  font-family: "Satoshi-Bold", sans-serif;
+  font-family: "Satoshi-Medium", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-.cabinet-400 {
-  font-family: "CabinetGrotesk-Regular", sans-serif;
-  font-weight: 400; /* Regular weight */
+.alpino-700 {
+  font-family: "Alpino-Bold", sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
-.cabinet-500 {
-  font-family: "CabinetGrotesk-Regular", sans-serif;
-  font-weight: 500; /* Regular weight */
+.alpino-400 {
+  font-family: "Alpino-Regular", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
-.cabinet-700 {
-  font-family: "CabinetGrotesk-Regular", sans-serif;
-  font-weight: 700; /* Regular weight */
+.alpino-500 {
+  font-family: "Alpino-Medium", sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
-
-/* Hide scrollbar for IE, Edge, and Firefox */
 html {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

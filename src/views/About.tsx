@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Resume from "./Resume.tsx";
 
 export default function About() {
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -6,13 +7,10 @@ export default function About() {
   const [copied, setCopied] = useState(false);
 
   const copyText = async () => {
-    console.log("clickeed");
     if (!textRef || !textRef.current) {
-      console.log("asdfadsf");
       return;
     }
 
-    console.log("here");
     try {
       await navigator.clipboard.writeText(
         textRef.current.textContent ? textRef.current.textContent : ""
@@ -37,18 +35,18 @@ export default function About() {
   }, [hover]);
 
   return (
-    <div>
-      <h1 className="cabinet-700 text-5xl text-foregroundLight dark:text-foregroundDark">
+    <div className="">
+      <h1 className="alpino-700 text-5xl text-foregroundLight dark:text-foregroundDark transition-color duration-1000">
         Hi, I'm <span className="text-sky">Anup Bhoos</span>! 🤟
       </h1>
-      <h2 className="cabinet-400 text-3xl mt-3 text-foregroundLight dark:text-foregroundDark">
+      <h2 className="alpino-400 text-3xl mt-3 text-foregroundLight dark:text-foregroundDark transition-color duration-1000">
         Small-town lad, <br />
         curious about most things
       </h2>
-      <h3 className="text-para dark:text-foregroundDark cabinet-700 text-xl mt-8">
-        Short Bio
+      <h3 className="text-backgroundDark dark:text-foregroundDark alpino-700 text-[22px] mt-8 transition-color duration-1000">
+        Short bio
       </h3>
-      <p className="text-foregroundLight dark:text-paraDark">
+      <p className="text-foregroundLight dark:text-paraDark transition-color duration-1000">
         My name is Anup Bhoos. I am an Indian living in Maharashtra. I was born
         in a small town and have lived in towns across India, which has given me
         a diverse perspective on life and work.
@@ -64,22 +62,23 @@ export default function About() {
         interests.
       </p>
 
+      <Resume />
       <div className="mt-10">
-        <h2 className="text-para dark:text-foregroundDark cabinet-700 text-xl mt-8">
-          Say Hello
+        <h2 className="text-backgroundDark dark:text-foregroundDark alpino-700 text-[22px] mt-8 transition-color duration-1000">
+          Say hello!
         </h2>
-        <p className="text-foregroundLight dark:text-paraDark ">
+        <p className="text-foregroundLight dark:text-paraDark transition-color duration-1000">
           Got an idea, looking to collaborate, or just want to chat? Feel free
           to reach out!
           <br />
         </p>
-        <p className="text-foregroundLight dark:text-paraDark mt-4">
+        <p className="text-foregroundLight dark:text-paraDark mt-4 transition-color duration-1000">
           For the quickest replies
         </p>
         <div className="text-darkButton flex gap-x-4 items-center">
           <p
             ref={textRef}
-            className="text-foregroundLight dark:text-darkButton "
+            className="text-foregroundLight dark:text-darkButton transition-color duration-1000"
           >
             anup.bhoos2003@gmail.com
           </p>

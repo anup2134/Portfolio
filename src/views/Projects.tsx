@@ -21,7 +21,7 @@ export default function Projects() {
 
   return (
     <div className="w-full">
-      <h1 className="mb-10 cabinet-700 text-xl text-para dark:text-foregroundDark">
+      <h1 className="mb-10 alpino-700 text-[22px] text-para dark:text-foregroundDark">
         Technologies I use:
       </h1>
       <StackStrip imageArray={array} />
