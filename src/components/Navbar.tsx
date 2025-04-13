@@ -15,9 +15,9 @@ const Navbar = memo(() => {
       className="min-h-screen max-h-fit w-[12%] border-r 
         dark:border-r-foregroundLight  border-r-gray-300
         flex justify-center items-center 
-        sm:pr-0 sm:flex sm:flex-row sm:gap-x-10 sm:gap-y-0 sm:fixed sm:-bottom-2 sm:z-20 
-        sm:min-h-fit sm:h-16 sm:w-screen sm:max-h-none
-        sm:justify-center sm:items-center sm:dark:bg-backgroundDark sm:bg-gray-200 sm:border-t sm:border-r-0 sm:border-t-foregroundLight fixed"
+        sm:pr-0 sm:flex sm:flex-row sm:gap-x-10 sm:gap-y-0 sm:-bottom-2 sm:z-20 
+        sm:min-h-fit sm:h-16 sm:w-screen sm:max-h-none sm:pb-2
+        sm:justify-center sm:items-center sm:dark:bg-backgroundDark sm:bg-gray-200 sm:border-t sm:border-r-0 sm:dark:border-t-foregroundLight  sm:border-t-gray-300 fixed"
       style={{
         transition: "border-color 0.8s linear,background-color 0.7s linear",
       }}

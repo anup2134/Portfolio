@@ -61,7 +61,7 @@ export default function Project({
       <h2 className="dark:text-foregroundDark text-foregroundLight text-[22px] sm:text-xl mb-3 alpino-700 transition-colors duration-700">
         Description
       </h2>
-      <ul className="list-decimal list-outside text-para dark:text-paraDark satoshi-500 mb-5 leading-[1.375rem]">
+      <ul className="list-decimal list-outside text-para dark:text-paraDark satoshi-500 mb-5 leading-[1.375rem] sm:ml-4">
         {description.split("\n").map((line: string, idx: number) => {
           return (
             <li key={idx} className="mb-1 transition-colors duration-700">
@@ -74,7 +74,7 @@ export default function Project({
       <h2 className="dark:text-foregroundDark text-foregroundLight text-[22px] sm:text-xl mb-3 alpino-700 transition-colors duration-700">
         Outcomes
       </h2>
-      <ul className="list-decimal list-outside text-para dark:text-paraDark satoshi-500 mb-5 leading-[1.375rem]">
+      <ul className="list-decimal list-outside text-para dark:text-paraDark satoshi-500 mb-5 leading-[1.375rem] sm:ml-4">
         {outcomes.split("\n").map((line: string, idx: number) => {
           return (
             <li key={idx} className="mb-1 transition-colors duration-700">
