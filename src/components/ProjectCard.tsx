@@ -4,12 +4,12 @@ export default function ProjectCard({
   name,
   description,
   rotate,
-  image,
+  Image,
 }: {
   name: string;
   description: string;
   rotate?: boolean;
-  image: string;
+  Image: string | React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 }) {
   const navigate = useNavigate();
   const handleNavigation = () => {
@@ -28,7 +28,11 @@ export default function ProjectCard({
             "border-color 1s linear, background-color 1s linear, transform 0.4s ease",
         }}
       >
-        <img src={image ? image : ""} className="h-10 w-10 rounded-full" />
+        {typeof Image === "string" ? (
+          <img src={Image} className="h-10 w-10 rounded-full" />
+        ) : (
+          <Image height={40} width={40} />
+        )}
         <h2 className="text-foregroundLight dark:text-foregroundDark satoshi-700 text-lg my-2">
           {name}
         </h2>

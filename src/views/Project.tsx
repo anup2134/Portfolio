@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 
 export default function Project({
-  image,
+  Image,
   description,
   outcomes,
   liveLink,
@@ -9,7 +9,7 @@ export default function Project({
 }: {
   githubLink?: string;
   liveLink?: string;
-  image: string;
+  Image: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   description: string;
   outcomes: string;
 }) {
@@ -39,7 +39,8 @@ export default function Project({
   return (
     <div className="">
       <div className="gap-x-5 flex items-center">
-        <img src={image} className="h-8 w-8" />
+        {/* <img src={image} className="h-8 w-8" /> */}
+        <Image height={32} width={32} />
         <h1 className="dark:text-foregroundDark text-foregroundLight text-3xl sm:text-2xl alpino-700 transition-colors duration-700">
           {name}
         </h1>

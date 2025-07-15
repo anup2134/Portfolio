@@ -11,11 +11,12 @@ import About from "./views/About.js";
 import Projects from "./views/Projects.js";
 import Project from "./views/Project.js";
 import PageNotFound from "./views/PageNotFound.tsx";
-import AI from "./assets/ai.svg";
-import Flyleaf from "./assets/flyleaf.svg";
-import HF from "./assets/hellofresh.svg";
-import TTT from "./assets/superttt.svg";
-import PersonalDrive from "./assets/personal-drive.svg";
+import AI from "./assets/ai.svg?react";
+import Clipboard from "./assets/clipboard.svg?react";
+import Flyleaf from "./assets/flyleaf.svg?react";
+import HF from "./assets/hellofresh.svg?react";
+import TTT from "./assets/superttt.svg?react";
+import PersonalDrive from "./assets/personal-drive.svg?react";
 
 function App() {
   const [visited, setVisited] = useState(false);
@@ -39,10 +40,27 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
           <Route
+            path="project/Clipboard Manager"
+            element={
+              <Project
+                githubLink="https://github.com/anup2134/Clipboard"
+                Image={Clipboard}
+                description={`Built a lightweight, persistent clipboard manager for X11-based Linux desktops with a PyQt GUI and a Go-based background daemon.
+    The daemon continuously monitors clipboard content via xclip, deduplicates entries, and maintains a rolling history of the last 20 copied items, including support for text and image data.
+    Implemented a custom interprocess communication mechanism using Unix Domain Sockets (UDS) to allow secure, low-latency data transfer between the frontend and backend.
+    Leveraged Go for concurrency, file I/O, and system-level signal handling; used Python/PyQt for an accessible UI.`}
+                outcomes={`None of the available clipboard managers on Linux felt right, and I really missed the built-in clipboard manager from Windows — one of the few features I actually liked.  
+Ubuntu doesn’t come with a clipboard history tool, so I built my own that behaves the way I wanted: simple, persistent, and out of the way.  
+This project gave me a chance to explore system programming in Go, interprocess communication via Unix Domain Sockets, and cross-language integration with a PyQt frontend.  
+It ended up being a reliable daily-use tool that’s modular, minimal, and tailored to how I actually work.`}
+              />
+            }
+          />
+          <Route
             path="project/Fluid-flow reconstruction"
             element={
               <Project
-                image={AI}
+                Image={AI}
                 description={`Designed and implemented a dual high-speed camera setup to capture high-frame-rate Schlieren images of supersonic jet flows.
               Applied traditional flow reconstruction techniques, such as Proper Orthogonal Decomposition (POD) and Singular Value Decomposition (SVD), to analyse and reconstruct flow patterns.
               Developed and trained machine learning models, including U-Net Convolutional Neural Networks (CNN) and Super-Resolution Generative Adversarial Networks (SR-GAN), using Keras to enhance image resolution and reconstruction accuracy.`}
@@ -57,7 +75,7 @@ function App() {
             element={
               <Project
                 githubLink="https://github.com/anup2134/Flyleaf-Frontend"
-                image={Flyleaf}
+                Image={Flyleaf}
                 description={`A web application aimed at helping users track their reading progress, discover new books, and develop consistent reading habits.
             Features personalized book recommendations and progress tracking tools to keep users motivated.
             Built with Next.js for a fast, responsive, and SEO-friendly front-end.
@@ -75,7 +93,7 @@ function App() {
             element={
               <Project
                 githubLink="https://github.com/anup2134/Personal-Drive"
-                image={PersonalDrive}
+                Image={PersonalDrive}
                 description={`A secure cloud storage platform for uploading, organizing, and accessing files—offering a user experience similar to Google Drive.
             Enables intelligent document retrieval with semantic search and query-based answering for text files like PDFs and Word documents.
             Built with Django and Celery for a robust, asynchronous backend, and React with Redux and ShadCN for a modern, responsive UI.
@@ -90,7 +108,7 @@ function App() {
             path="project/Hello Fresh"
             element={
               <Project
-                image={HF}
+                Image={HF}
                 githubLink="https://github.com/anup2134/fastfood-nutrition-app"
                 description={`A web application that showcases detailed nutritional information for fast-food items from various chains.
                   Data is sourced from official nutrition PDFs, parsed programmatically, and stored for easy access.
@@ -110,7 +128,7 @@ function App() {
             element={
               <Project
                 githubLink="https://github.com/anup2134/SuperTTT"
-                image={TTT}
+                Image={TTT}
                 description={`A web-based implementation of Ultimate Tic-Tac-Toe, an advanced version of the classic game with enhanced rules and deeper strategic gameplay.
             Developed using Node.js with WebSockets for real-time, interactive multiplayer gameplay.
             Applied Object-Oriented Programming (OOP) principles for efficient game state management and seamless player matchmaking.
