@@ -7,12 +7,8 @@ import { useState } from "react";
 import Navbar from "../components/Navbar.tsx";
 
 export default function HomePage() {
-  // const navigate = useNavigate();
   const [mode, setMode] = useState<"dark" | "light">("dark");
-  // const location = useLocation();
-  // console.log(location);
   const toggleMode = () => {
-    // console.log("clicked");
     const root = document.documentElement;
     setMode((prevMode) => {
       if (prevMode === "dark") {
@@ -35,13 +31,6 @@ export default function HomePage() {
     >
       <div className="absolute w-full h-full -z-10 bg-backgroundDark dark:bg-gray-200"></div>
       <section className="flex sm:block  min-h-screen max-h-fit">
-        {/* <div
-          className="min-h-screen max-h-fit w-1/6 border-r sm:border-t sm:border-r-0
-              dark:border-r-foregroundLight sm:border-t-foregroundLight border-r-[#E5E7EB]
-              flex flex-col gap-y-16 justify-center items-end pr-16 sm:pr-0 sm:flex-row sm:gap-x-10
-              sm:gap-y-0 sm:block sm:fixed sm:-bottom-2 sm:z-20 sm:min-h-fit sm:h-16 sm:w-screen sm:max-h-none
-              sm:justify-center sm:items-center sm:bg-black"
-        > */}
         <Navbar />
         <div className="w-1/6 sm:hidden mr-7"></div>
         <div className="w-full px-6 max-w-[1000px]">
@@ -83,7 +72,7 @@ export default function HomePage() {
             </button>
             <a
               className="bg-sky rounded-full px-3 h-8 text-center flex items-center text-darkButton hover:bg-[#0284C7] transition-colors duration-300"
-              href="https://drive.google.com/file/d/1nrbHLjL6vzh81OaaE4AnTsxWojxM1zxs/view?usp=sharing"
+              href="https://drive.google.com/file/d/1wpXEO9NOd48UJ_y3ahpCpdkMYwSa_GXy/view?usp=sharing"
               target="_blank"
             >
               Resume
