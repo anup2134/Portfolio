@@ -1,30 +1,45 @@
-# defined github action for build and deployment
+name: Build & Deploy (external builder)
+
 on:
   push:
     branches:
-      - master # main or master according to your github repo
+      - main
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
+      - name: Install jq (just in case)
+        run: |
+          if ! command -v jq >/dev/null 2>&1; then
+            sudo apt-get update -y
+            sudo apt-get install -y jq
+          fi
+
       - name: Send build request
         env:
           BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
           REPO: ${{ github.repository }}
           SHA: ${{ github.sha }}
+        shell: bash
         run: |
-          read -r -d '' PAYLOAD <<'JSON'
-          {
-            "repoName": "${REPO}",
-            "event": "main_push",
-            "commit": "${SHA}",
-          }
-          JSON
+          set -euo pipefail
+
+          PAYLOAD="$(jq -n \
+            --arg repo "$REPO" \
+            --arg sha  "$SHA" \
+            '{repoName: $repo, event: "main_push", commit: $sha}')"
+
+          # Optional: show payload without secrets for debugging
+          echo "Sending payload: $(jq -c . <<<"$PAYLOAD")"
 
           curl --fail --show-error --silent \
-            --max-time 20 --retry 3 --retry-delay 2 \
+            --connect-timeout 5 \
+            --max-time 20 \
+            --retry 3 --retry-delay 2 \
             -X POST https://build.wpcustompros.com/build \
-            -H "Content-Type: application/json" \
-            -H "Authorization: Bearer ${BUILD_TOKEN}" \
-            -d "${PAYLOAD}"
+            -H 'Content-Type: application/json' \
+            -H "Authorization: Bearer $BUILD_TOKEN" \
+            -d "$PAYLOAD"
