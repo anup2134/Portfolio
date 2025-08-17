@@ -1,4 +1,4 @@
-name: Build & Deploy (external builder)
+name: Mini cloud docker image builder
 
 on:
   push:
@@ -27,12 +27,16 @@ jobs:
         run: |
           set -euo pipefail
 
-          PAYLOAD="$(jq -n \
-            --arg repo "$REPO" \
-            --arg sha  "$SHA" \
-            '{repoName: $repo, event: "main_push", commit: $sha}')"
+          OWNER="${REPO%%/*}"   # part before slash
+          NAME="${REPO##*/}"    # part after slash
 
-          # Optional: show payload without secrets for debugging
+          PAYLOAD="$(jq -n \
+            --arg owner "$OWNER" \
+            --arg repoName "$NAME" \
+            --arg fullRepo "$REPO" \
+            --arg sha "$SHA" \
+            '{owner: $owner, repoName: $repoName, fullRepo: $fullRepo, event: "main_push", commit: $sha}')"
+
           echo "Sending payload: $(jq -c . <<<"$PAYLOAD")"
 
           curl --fail --show-error --silent \
