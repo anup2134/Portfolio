@@ -33,9 +33,8 @@ jobs:
           PAYLOAD="$(jq -n \
             --arg owner "$OWNER" \
             --arg repoName "$NAME" \
-            --arg fullRepo "$REPO" \
             --arg sha "$SHA" \
-            '{owner: $owner, repoName: $repoName, fullRepo: $fullRepo, event: "main_push", commit: $sha}')"
+            '{owner: $owner, repoName: $repoName, event: "main_push", commit: $sha}')"
 
           echo "Sending payload: $(jq -c . <<<"$PAYLOAD")"
 
