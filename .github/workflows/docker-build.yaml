@@ -1,4 +1,4 @@
-name: Mini cloud docker image builder
+name: Build & Deploy (external builder)
 
 on:
   push:
